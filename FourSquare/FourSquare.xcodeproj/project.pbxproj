@@ -22,6 +22,12 @@
 		0DC923762885E354007783EB /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC923752885E354007783EB /* Environment.swift */; };
 		0DC923792885E478007783EB /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC923782885E478007783EB /* URL+Extensions.swift */; };
 		0DC9237F2885ECFE007783EB /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9237E2885ECFE007783EB /* Bundle+Extensions.swift */; };
+		0DC923822885EF07007783EB /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC923812885EF07007783EB /* Reachability.swift */; };
+		0DC923892885F20E007783EB /* PlacesSearchEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC923882885F20E007783EB /* PlacesSearchEndpoints.swift */; };
+		0DC9238B2885F5FA007783EB /* PlacesSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9238A2885F5FA007783EB /* PlacesSearchService.swift */; };
+		0DC9238E2885F62F007783EB /* FSResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9238D2885F62F007783EB /* FSResponse.swift */; };
+		0DC9239A2887FC33007783EB /* VenuesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC923992887FC33007783EB /* VenuesViewModel.swift */; };
+		0DC9239C2887FC40007783EB /* VenuesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9239B2887FC40007783EB /* VenuesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +69,12 @@
 		0DC9237C2885E943007783EB /* release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
 		0DC9237D2885EB99007783EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0DC9237E2885ECFE007783EB /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		0DC923812885EF07007783EB /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		0DC923882885F20E007783EB /* PlacesSearchEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesSearchEndpoints.swift; sourceTree = "<group>"; };
+		0DC9238A2885F5FA007783EB /* PlacesSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesSearchService.swift; sourceTree = "<group>"; };
+		0DC9238D2885F62F007783EB /* FSResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSResponse.swift; sourceTree = "<group>"; };
+		0DC923992887FC33007783EB /* VenuesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesViewModel.swift; sourceTree = "<group>"; };
+		0DC9239B2887FC40007783EB /* VenuesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +125,10 @@
 		0DC9233F2884B5DB007783EB /* FourSquare */ = {
 			isa = PBXGroup;
 			children = (
-				0DC9237D2885EB99007783EB /* Info.plist */,
+				0DC923972887FC04007783EB /* UI */,
+				0DC9238C2885F610007783EB /* Models */,
+				0DC923832885EF23007783EB /* Repositories */,
+				0DC923802885EEF4007783EB /* Common */,
 				0DC9237A2885E912007783EB /* Configurations */,
 				0DC923772885E465007783EB /* Extensions */,
 				0DC9236A2885E054007783EB /* APIHandler */,
@@ -121,6 +136,7 @@
 				0DC923422884B5DB007783EB /* ContentView.swift */,
 				0DC923442884B5DD007783EB /* Assets.xcassets */,
 				0DC923462884B5DD007783EB /* Preview Content */,
+				0DC9237D2885EB99007783EB /* Info.plist */,
 			);
 			path = FourSquare;
 			sourceTree = "<group>";
@@ -179,6 +195,112 @@
 				0DC9237C2885E943007783EB /* release.xcconfig */,
 			);
 			path = Configurations;
+			sourceTree = "<group>";
+		};
+		0DC923802885EEF4007783EB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0DC9239D2887FCC4007783EB /* Views */,
+				0DC923812885EF07007783EB /* Reachability.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0DC923832885EF23007783EB /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				0DC923862885EF49007783EB /* LocationManager */,
+				0DC923842885EF34007783EB /* PlacesSearch */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		0DC923842885EF34007783EB /* PlacesSearch */ = {
+			isa = PBXGroup;
+			children = (
+				0DC923872885F1EB007783EB /* Endpoints */,
+				0DC9238A2885F5FA007783EB /* PlacesSearchService.swift */,
+			);
+			path = PlacesSearch;
+			sourceTree = "<group>";
+		};
+		0DC923862885EF49007783EB /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
+		0DC923872885F1EB007783EB /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				0DC923882885F20E007783EB /* PlacesSearchEndpoints.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		0DC9238C2885F610007783EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0DC9238D2885F62F007783EB /* FSResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0DC923972887FC04007783EB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0DC923982887FC0C007783EB /* VenuesList */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0DC923982887FC0C007783EB /* VenuesList */ = {
+			isa = PBXGroup;
+			children = (
+				0DC923992887FC33007783EB /* VenuesViewModel.swift */,
+				0DC9239B2887FC40007783EB /* VenuesView.swift */,
+			);
+			path = VenuesList;
+			sourceTree = "<group>";
+		};
+		0DC9239D2887FCC4007783EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0DC923A12887FCEB007783EB /* ErrorView */,
+				0DC923A02887FCE3007783EB /* LoadingView */,
+				0DC9239F2887FCD6007783EB /* EmptyResultsView */,
+				0DC9239E2887FCCE007783EB /* Buttons */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0DC9239E2887FCCE007783EB /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		0DC9239F2887FCD6007783EB /* EmptyResultsView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EmptyResultsView;
+			sourceTree = "<group>";
+		};
+		0DC923A02887FCE3007783EB /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		0DC923A12887FCEB007783EB /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ErrorView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,13 +433,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DC923892885F20E007783EB /* PlacesSearchEndpoints.swift in Sources */,
 				0DC9236C2885E06C007783EB /* Requestable.swift in Sources */,
+				0DC9239A2887FC33007783EB /* VenuesViewModel.swift in Sources */,
 				0DC9237F2885ECFE007783EB /* Bundle+Extensions.swift in Sources */,
 				0DC923762885E354007783EB /* Environment.swift in Sources */,
+				0DC9239C2887FC40007783EB /* VenuesView.swift in Sources */,
 				0DC923742885E343007783EB /* APIClient.swift in Sources */,
 				0DC923432884B5DB007783EB /* ContentView.swift in Sources */,
 				0DC923792885E478007783EB /* URL+Extensions.swift in Sources */,
+				0DC9238B2885F5FA007783EB /* PlacesSearchService.swift in Sources */,
 				0DC9236E2885E0E7007783EB /* NetworkRequest.swift in Sources */,
+				0DC9238E2885F62F007783EB /* FSResponse.swift in Sources */,
+				0DC923822885EF07007783EB /* Reachability.swift in Sources */,
 				0DC923722885E334007783EB /* NetworkError.swift in Sources */,
 				0DC923702885E326007783EB /* HTTPMethod.swift in Sources */,
 				0DC923412884B5DB007783EB /* FourSquareApp.swift in Sources */,

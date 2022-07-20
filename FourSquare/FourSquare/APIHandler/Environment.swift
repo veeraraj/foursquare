@@ -16,13 +16,13 @@ public enum Environment: String, CaseIterable {
 extension Environment {
     private enum Constants: String {
         case apiKey = "apiKey"
-        case apiSecret = "apiSecret"
+        case clientSecret = "clientSecret"
         case clientID = "clientID"
         case fatalErrorMessage = "You must supply API key and secret in the Info.plist under apiKey and spiSecret"
-        case baseUrl = "https://api.foursquare.com/v3"
+        case baseUrl = "https://api.foursquare.com/v2"
     }
     
-    var paceSearchBaseURL: String {
+    var placeSearchBaseURL: String {
         switch self {
         case .development, .staging, .production:
             return Constants.baseUrl.rawValue
@@ -41,9 +41,9 @@ extension Environment {
         return apiKey
     }
     
-    var apiSecret: String {
+    var clientSecret: String {
         guard
-            let apiSecret: String = Bundle.fetchValue(for: Constants.apiKey.rawValue)
+            let apiSecret: String = Bundle.fetchValue(for: Constants.clientSecret.rawValue)
         else {
             fatalError(Constants.fatalErrorMessage.rawValue)
         }
@@ -59,5 +59,9 @@ extension Environment {
         }
         
         return clientID
+    }
+    
+    var version: String {
+        "20220718"
     }
 }
