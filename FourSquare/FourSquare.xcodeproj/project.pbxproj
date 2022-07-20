@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0DC923412884B5DB007783EB /* FourSquareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC923402884B5DB007783EB /* FourSquareApp.swift */; };
-		0DC923432884B5DB007783EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC923422884B5DB007783EB /* ContentView.swift */; };
 		0DC923452884B5DD007783EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DC923442884B5DD007783EB /* Assets.xcassets */; };
 		0DC923482884B5DD007783EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DC923472884B5DD007783EB /* Preview Assets.xcassets */; };
 		0DC923522884B5DE007783EB /* FourSquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC923512884B5DE007783EB /* FourSquareTests.swift */; };
@@ -50,7 +49,6 @@
 /* Begin PBXFileReference section */
 		0DC9233D2884B5DB007783EB /* FourSquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourSquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC923402884B5DB007783EB /* FourSquareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareApp.swift; sourceTree = "<group>"; };
-		0DC923422884B5DB007783EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0DC923442884B5DD007783EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DC923472884B5DD007783EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0DC9234D2884B5DD007783EB /* FourSquareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FourSquareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,7 +131,6 @@
 				0DC923772885E465007783EB /* Extensions */,
 				0DC9236A2885E054007783EB /* APIHandler */,
 				0DC923402884B5DB007783EB /* FourSquareApp.swift */,
-				0DC923422884B5DB007783EB /* ContentView.swift */,
 				0DC923442884B5DD007783EB /* Assets.xcassets */,
 				0DC923462884B5DD007783EB /* Preview Content */,
 				0DC9237D2885EB99007783EB /* Info.plist */,
@@ -440,7 +437,6 @@
 				0DC923762885E354007783EB /* Environment.swift in Sources */,
 				0DC9239C2887FC40007783EB /* VenuesView.swift in Sources */,
 				0DC923742885E343007783EB /* APIClient.swift in Sources */,
-				0DC923432884B5DB007783EB /* ContentView.swift in Sources */,
 				0DC923792885E478007783EB /* URL+Extensions.swift in Sources */,
 				0DC9238B2885F5FA007783EB /* PlacesSearchService.swift in Sources */,
 				0DC9236E2885E0E7007783EB /* NetworkRequest.swift in Sources */,

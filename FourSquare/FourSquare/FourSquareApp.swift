@@ -11,8 +11,8 @@ import SwiftUI
 struct FourSquareApp: App {
     var body: some Scene {
         WindowGroup {
-            let viewModel = ContentviewModel(placesSearchService: PlacesSearchService(networkRequest: APIClient(), environment: .development))
-            ContentView(viewModel: viewModel)
+            let viewModel = VenuesViewModel(placesSearchService: PlacesSearchService(networkRequest: APIClient(), environment: .development))
+            VenuesView(viewModel: viewModel)
         }
     }
 }
