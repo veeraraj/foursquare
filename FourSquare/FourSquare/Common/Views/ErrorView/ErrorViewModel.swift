@@ -8,13 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct ErrorViewModel {
-    private enum Constants: String {
-        case title = "Error"
-        case subTitle = "Something went wrong"
-        case retryButtonTitle = "Retry Now"
-    }
-    
+struct ErrorViewModel {    
     let image: UIImage?
     let title: String
     var subTitle: String
@@ -22,10 +16,10 @@ struct ErrorViewModel {
     let retry: (() -> Void)?
     
     init(
-        image: UIImage? = UIImage(named: Constants.title.rawValue.lowercased()),
-        title: String = Constants.title.rawValue,
-        subTitle: String = Constants.subTitle.rawValue,
-        retryButtonTitle: String = Constants.retryButtonTitle.rawValue,
+        image: UIImage? = UIImage(named: "error"),
+        title: String = "error".localized,
+        subTitle: String = "somethingWentWrong".localized,
+        retryButtonTitle: String = "retryNow".localized,
         retry: (() -> Void)? = nil
     ) {
         self.image = image

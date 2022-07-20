@@ -39,6 +39,8 @@
 		0DC923B728884629007783EB /* UserLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC923B628884629007783EB /* UserLocationService.swift */; };
 		0DC923B928884BB2007783EB /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC923B828884BB2007783EB /* Publisher+Extensions.swift */; };
 		0DC923BC28885B0B007783EB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0DC923BB28885B0B007783EB /* Settings.bundle */; };
+		0DC923BF2888634D007783EB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DC923C12888634D007783EB /* Localizable.strings */; };
+		0DC923C42888650B007783EB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC923C32888650B007783EB /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		0DC923B628884629007783EB /* UserLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationService.swift; sourceTree = "<group>"; };
 		0DC923B828884BB2007783EB /* Publisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
 		0DC923BB28885B0B007783EB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		0DC923C02888634D007783EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0DC923C32888650B007783EB /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +212,7 @@
 				0DC9237E2885ECFE007783EB /* Bundle+Extensions.swift */,
 				0DC923AC28883309007783EB /* UIImage+Extensions.swift */,
 				0DC923B828884BB2007783EB /* Publisher+Extensions.swift */,
+				0DC923C32888650B007783EB /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				0DC923BB28885B0B007783EB /* Settings.bundle */,
+				0DC923C12888634D007783EB /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -449,6 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DC923482884B5DD007783EB /* Preview Assets.xcassets in Resources */,
+				0DC923BF2888634D007783EB /* Localizable.strings in Resources */,
 				0DC923BC28885B0B007783EB /* Settings.bundle in Resources */,
 				0DC923452884B5DD007783EB /* Assets.xcassets in Resources */,
 			);
@@ -488,6 +495,7 @@
 				0DC923AD28883309007783EB /* UIImage+Extensions.swift in Sources */,
 				0DC923A92888327F007783EB /* ErrorView.swift in Sources */,
 				0DC923B328883369007783EB /* EmptyResultsViewModel.swift in Sources */,
+				0DC923C42888650B007783EB /* String+Extensions.swift in Sources */,
 				0DC923792885E478007783EB /* URL+Extensions.swift in Sources */,
 				0DC9238B2885F5FA007783EB /* PlacesSearchService.swift in Sources */,
 				0DC923A728883274007783EB /* ErrorViewModel.swift in Sources */,
@@ -535,6 +543,17 @@
 			targetProxy = 0DC923582884B5DE007783EB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0DC923C12888634D007783EB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0DC923C02888634D007783EB /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0DC9235F2884B5DE007783EB /* Debug */ = {

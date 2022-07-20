@@ -24,8 +24,8 @@ struct VenuesView: View {
     @ViewBuilder
     func locationPermissionSoftLandingView() -> some View {
         VStack(spacing: 32) {
-            Text("Please enable location")
-            Button("Go to settings", action: { viewModel.didTapOpenSettings() })
+            Text("enableLocation".localized)
+            Button("goToSettings".localized, action: { viewModel.didTapOpenSettings() })
                 .buttonStyle(PrimaryActionButton())
         }
         .padding(.all, 16)
@@ -33,7 +33,7 @@ struct VenuesView: View {
     @ViewBuilder
     func contentView() -> some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("Adjust search radius")
+            Text("adjustSearchRadius".localized)
             HStack(spacing: 8) {
                 Slider(value: Binding(get: {
                     viewModel.radius
@@ -43,7 +43,7 @@ struct VenuesView: View {
                     .padding(.all)
                 Text("\(Int(viewModel.radius)) m")
                 
-                Button("Search", action: { viewModel.didTapSearch() })
+                Button("search".localized, action: { viewModel.didTapSearch() })
                     .buttonStyle(PrimaryActionButton())
                     .frame(maxWidth: 100, maxHeight: 40)
             }
@@ -97,7 +97,7 @@ struct VenuesView: View {
     @ViewBuilder
     func loadingView() -> some View {
         VStack {
-            LoadingView(loadingText: "Loading")
+            LoadingView(loadingText: "loading".localized)
         }
     }
     

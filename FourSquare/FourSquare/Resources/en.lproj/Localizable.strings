@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  FourSquare
+
+  Created by Veera on 20/07/22.
+  
+*/
+
+"loading" = "Loading";
+"search" = "Search";
+"enableLocation" = "Please enable location";
+"goToSettings" = "Go to settings";
+"adjustSearchRadius" = "Adjust search radius";
+"error" = "Error";
+"somethingWentWrong" = "Something went wrong";
+"retryNow" = "Retry Now";
+"empty" = "Empty";
+"noResultsToShow" = "No Results to show";

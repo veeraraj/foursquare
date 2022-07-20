@@ -16,7 +16,7 @@ extension FSError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .somethingWentWrong:
-            return  "something went wrong"
+            return  "somethingWentWrong".localized
         case .errorWithDescription(let error):
             return error
         }
