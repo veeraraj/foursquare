@@ -9,6 +9,7 @@ import Foundation
 
 import Combine
 import CoreLocation
+import UIKit
 
 final class VenuesViewModel: LoadableObject {
     private let placesSearchService: PlacesSearchServiceProtocol
@@ -18,6 +19,7 @@ final class VenuesViewModel: LoadableObject {
     @Published private(set) var state: State = .idle
     @Published var rachability = Reachability()
     @Published var radius: Double = 600.0
+    @Published var isLocationAccessEnabled: Bool = false
     
     lazy var errorViewModel: ErrorViewModel = {
         ErrorViewModel() { [weak self] in
@@ -38,20 +40,41 @@ final class VenuesViewModel: LoadableObject {
         self.placesSearchService = placesSearchService
         self.userLocationService = userLocationService
         
-        searchForVenues()
+        bind()
     }
     
     func didTapRetryButton() {
         searchForVenues()
     }
     
+    func didTapSearch() {
+        searchForVenues()
+    }
+    
+    func didTapOpenSettings() {
+        UIApplication.shared.open(URL(string:UIApplication.openSettingsURLString)!)
+    }
+    
     func bind() {
-        
+        userLocationService
+            .didChangeAuthorization
+            .removeDuplicates()
+            .sink(receiveValue: { [weak self] authorization in
+                switch authorization {
+                case .authorizedAlways, .authorizedWhenInUse:
+                    self?.isLocationAccessEnabled = true
+                default:
+                    self?.isLocationAccessEnabled = false
+                }
+            })
+            .store(in: &subscriptions)
     }
     
     func searchForVenues() {
+        guard let location =  userLocationService.currentUserLocation() else { return }
+                
         state = .loading
-        placesSearchService.searchVenues(location: CLLocationCoordinate2D(latitude: 52.3676, longitude: 4.9041), radius: 500)
+        placesSearchService.searchVenues(location: location, radius: Int(radius))
             .sink ( receiveCompletion: { [weak self] completion in
                 switch completion {
                 case .failure(let error):

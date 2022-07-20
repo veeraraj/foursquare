@@ -13,7 +13,7 @@ final class UserLocationService {
     // MARK: Properties
     let authorizationStatus: () -> CLAuthorizationStatus
     let requestLocation: () -> Void
-    let getCurrentUserLocation: () -> AnyPublisher<CLLocation, Error>
+    let currentUserLocation: () -> CLLocationCoordinate2D?
     let didChangeAuthorization: AnyPublisher<CLAuthorizationStatus, Never>
     let didDeallocate: () -> Void
     
@@ -22,13 +22,13 @@ final class UserLocationService {
     init(
         authorizationStatus: @escaping () -> CLAuthorizationStatus,
         requestLocation: @escaping () -> Void,
-        getCurrentUserLocation: @escaping () -> AnyPublisher<CLLocation, Error>,
+        currentUserLocation: @escaping () -> CLLocationCoordinate2D?,
         didChangeAuthorization: AnyPublisher<CLAuthorizationStatus, Never>,
         didDeallocate: @escaping () -> Void
     ) {
         self.authorizationStatus = authorizationStatus
         self.requestLocation = requestLocation
-        self.getCurrentUserLocation = getCurrentUserLocation
+        self.currentUserLocation = currentUserLocation
         self.didChangeAuthorization = didChangeAuthorization
         self.didDeallocate = didDeallocate
     }
@@ -75,11 +75,11 @@ extension UserLocationService {
         return UserLocationService(
             authorizationStatus: { locationManager.authorizationStatus },
             requestLocation: locationManager.requestWhenInUseAuthorization,
-            getCurrentUserLocation: {
+            currentUserLocation: {
                 defer {
                     locationManager.startUpdatingLocation()
                 }
-                return currentLocationPublisher
+                return currentLocationSubject.value?.coordinate
             },
             didChangeAuthorization:  authorizationSubject.eraseToAnyPublisher(),
             didDeallocate: { delegate = nil }

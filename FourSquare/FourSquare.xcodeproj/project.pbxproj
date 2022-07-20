@@ -38,6 +38,7 @@
 		0DC923B52888368A007783EB /* FSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC923B42888368A007783EB /* FSError.swift */; };
 		0DC923B728884629007783EB /* UserLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC923B628884629007783EB /* UserLocationService.swift */; };
 		0DC923B928884BB2007783EB /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC923B828884BB2007783EB /* Publisher+Extensions.swift */; };
+		0DC923BC28885B0B007783EB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0DC923BB28885B0B007783EB /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		0DC923B42888368A007783EB /* FSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSError.swift; sourceTree = "<group>"; };
 		0DC923B628884629007783EB /* UserLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationService.swift; sourceTree = "<group>"; };
 		0DC923B828884BB2007783EB /* Publisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
+		0DC923BB28885B0B007783EB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		0DC923342884B5DB007783EB = {
 			isa = PBXGroup;
 			children = (
+				0DC923402884B5DB007783EB /* FourSquareApp.swift */,
 				0DC9233F2884B5DB007783EB /* FourSquare */,
 				0DC923502884B5DE007783EB /* FourSquareTests */,
 				0DC9235A2884B5DE007783EB /* FourSquareUITests */,
@@ -152,9 +155,9 @@
 				0DC9237A2885E912007783EB /* Configurations */,
 				0DC923772885E465007783EB /* Extensions */,
 				0DC9236A2885E054007783EB /* APIHandler */,
-				0DC923402884B5DB007783EB /* FourSquareApp.swift */,
 				0DC923442884B5DD007783EB /* Assets.xcassets */,
 				0DC923462884B5DD007783EB /* Preview Content */,
+				0DC923BA28885AFA007783EB /* Resources */,
 				0DC9237D2885EB99007783EB /* Info.plist */,
 			);
 			path = FourSquare;
@@ -333,6 +336,14 @@
 			path = ErrorView;
 			sourceTree = "<group>";
 		};
+		0DC923BA28885AFA007783EB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0DC923BB28885B0B007783EB /* Settings.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -438,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DC923482884B5DD007783EB /* Preview Assets.xcassets in Resources */,
+				0DC923BC28885B0B007783EB /* Settings.bundle in Resources */,
 				0DC923452884B5DD007783EB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

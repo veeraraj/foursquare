@@ -13,5 +13,11 @@
 	<string>$(CLIENT_ID)</string>
 	<key>clientSecret</key>
 	<string>$(CLIENT_SECRET)</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This App needs your current location to search for Venues near by</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This App needs your current location to search for Venues near by</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This App needs your current location to search for Venues near by</string>
 </dict>
 </plist>

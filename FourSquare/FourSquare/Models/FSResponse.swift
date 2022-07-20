@@ -45,72 +45,35 @@ struct GroupItem: Codable {
 
 // MARK: - Venue
 struct Venue: Codable {
-    let id, name: String
-    let location: Location
-    let categories: [Category]
-    let photos: Photos
-    let venuePage: VenuePage?
+    let id, name: String?
+    let location: Location?
 }
 
-// MARK: - Category
-struct Category: Codable {
-    let id, name, pluralName, shortName: String
-    let icon: Icon
-    let primary: Bool
-}
-
-// MARK: - Icon
-struct Icon: Codable {
-    let iconPrefix: String
-    let suffix: Suffix
-
-    enum CodingKeys: String, CodingKey {
-        case iconPrefix = "prefix"
-        case suffix
-    }
-}
-
-enum Suffix: String, Codable {
-    case png = ".png"
-}
 
 // MARK: - Location
 struct Location: Codable {
-    let address: String
-    let lat, lng: Double
-    let labeledLatLngs: [LabeledLatLng]
-    let distance: Int
+    let address: String?
+    let distance: Int?
     let postalCode: String?
-    let cc: String?
     let city: String?
     let state: String?
-    let country: String?
-    let formattedAddress: [String]
-    let crossStreet, neighborhood: String?
 }
 
-
-// MARK: - LabeledLatLng
-struct LabeledLatLng: Codable {
-    let label: Label
-    let lat, lng: Double
-}
-
-enum Label: String, Codable {
-    case display = "display"
-}
-
-// MARK: - Photos
-struct Photos: Codable {
-    let count: Int
-}
-
-// MARK: - VenuePage
-struct VenuePage: Codable {
-    let id: String
-}
-
-// MARK: - Ne
-struct Ne: Codable {
-    let lat, lng: Double
+extension Venue {
+    var displayName: String {
+        name ?? ""
+    }
+    
+    var address: String {
+        location?.address ?? ""
+    }
+    
+    var city: String {
+        location?.city ?? ""
+    }
+    
+    var distance: String? {
+        guard let distance = location?.distance else { return nil }
+        return "\(distance) m"
+    }
 }
