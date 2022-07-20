@@ -104,6 +104,7 @@
 		0DC923C32888650B007783EB /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		0DC923C8288868E2007783EB /* Mock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.generated.swift; sourceTree = SOURCE_ROOT; };
 		0DC923CA28886922007783EB /* VenuesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesViewModelTests.swift; sourceTree = "<group>"; };
+		0DC923CC288871B4007783EB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +136,7 @@
 		0DC923342884B5DB007783EB = {
 			isa = PBXGroup;
 			children = (
+				0DC923CC288871B4007783EB /* README.md */,
 				0DC923402884B5DB007783EB /* FourSquareApp.swift */,
 				0DC9233F2884B5DB007783EB /* FourSquare */,
 				0DC923502884B5DE007783EB /* FourSquareTests */,

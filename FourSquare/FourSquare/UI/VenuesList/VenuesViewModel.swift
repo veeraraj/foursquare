@@ -17,9 +17,9 @@ final class VenuesViewModel: LoadableObject {
     private var subscriptions = Set<AnyCancellable>()
     typealias State = LoadableData<[Venue]>
     @Published private(set) var state: State = .idle
+    @Published private(set) var isLocationAccessEnabled: Bool = false
     @Published var rachability = Reachability()
     @Published var radius: Double = 600.0
-    @Published var isLocationAccessEnabled: Bool = false
     
     lazy var errorViewModel: ErrorViewModel = {
         ErrorViewModel() { [weak self] in

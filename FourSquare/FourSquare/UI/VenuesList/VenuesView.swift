@@ -73,16 +73,22 @@ struct VenuesView: View {
         List(venues, id: \.id) { venue in
             LazyVStack(alignment: .leading, spacing: 8) {
                 Text(venue.displayName)
+                    .font(.headline).bold()
                 if let address = venue.location?.address {
                     Text(address)
+                        .font(.callout)
+                        .foregroundColor(.gray)
                 }
                 
                 if let city = venue.location?.city {
                     Text(city)
+                        .font(.callout)
+                        .foregroundColor(.gray)
                 }
                 
                 if let distance = venue.distance {
                     Text(distance)
+                        .font(.system(size: 14, weight: .bold))
                 }
             }
         }

@@ -74,6 +74,6 @@ extension Venue {
     
     var distance: String? {
         guard let distance = location?.distance else { return nil }
-        return "\(distance) m"
+        return "Distance \(distance) m"
     }
 }
