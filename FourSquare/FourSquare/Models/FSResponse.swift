@@ -16,18 +16,20 @@ struct FSResponse: Codable {
 // MARK: - Meta
 struct Meta: Codable {
     let code: Int
+    let errorType: String?
+    let errorDetail: String?
     let requestID: String
 
     enum CodingKeys: String, CodingKey {
-        case code
+        case code, errorType, errorDetail
         case requestID = "requestId"
     }
 }
 
 // MARK: - Response
 struct Response: Codable {
-    let totalResults: Int
-    let groups: [Group]
+    let totalResults: Int?
+    let groups: [Group]?
 }
 
 // MARK: - Group

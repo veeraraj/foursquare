@@ -40,6 +40,7 @@ public class APIClient: Requestable {
             .mapError { error in
                 NetworkError.invalidJSON(String(describing: error))
             }
+            .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
     }
 }

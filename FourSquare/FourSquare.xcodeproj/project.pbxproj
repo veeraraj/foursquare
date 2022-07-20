@@ -27,6 +27,7 @@
 		0DC9238E2885F62F007783EB /* FSResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9238D2885F62F007783EB /* FSResponse.swift */; };
 		0DC9239A2887FC33007783EB /* VenuesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC923992887FC33007783EB /* VenuesViewModel.swift */; };
 		0DC9239C2887FC40007783EB /* VenuesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9239B2887FC40007783EB /* VenuesView.swift */; };
+		0DC923A52887FEB6007783EB /* LoadableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC923A42887FEB6007783EB /* LoadableData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		0DC9238D2885F62F007783EB /* FSResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSResponse.swift; sourceTree = "<group>"; };
 		0DC923992887FC33007783EB /* VenuesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesViewModel.swift; sourceTree = "<group>"; };
 		0DC9239B2887FC40007783EB /* VenuesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesView.swift; sourceTree = "<group>"; };
+		0DC923A42887FEB6007783EB /* LoadableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			children = (
 				0DC9239D2887FCC4007783EB /* Views */,
 				0DC923812885EF07007783EB /* Reachability.swift */,
+				0DC923A42887FEB6007783EB /* LoadableData.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				0DC9238B2885F5FA007783EB /* PlacesSearchService.swift in Sources */,
 				0DC9236E2885E0E7007783EB /* NetworkRequest.swift in Sources */,
 				0DC9238E2885F62F007783EB /* FSResponse.swift in Sources */,
+				0DC923A52887FEB6007783EB /* LoadableData.swift in Sources */,
 				0DC923822885EF07007783EB /* Reachability.swift in Sources */,
 				0DC923722885E334007783EB /* NetworkError.swift in Sources */,
 				0DC923702885E326007783EB /* HTTPMethod.swift in Sources */,

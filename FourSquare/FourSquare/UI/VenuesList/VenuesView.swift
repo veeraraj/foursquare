@@ -10,6 +10,19 @@ import SwiftUI
 struct VenuesView: View {
     @ObservedObject var viewModel: VenuesViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            switch viewModel.state {
+            case .idle:
+                Text("idle")
+            case .loading:
+                Text("loading")
+            case .failed(let error):
+                Text(error.localizedDescription)
+            case .empty:
+                Text("idles")
+            case .loaded(let venues):
+                Text("\(venues.count)")
+            }
+        }
     }
 }

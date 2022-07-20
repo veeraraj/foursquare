@@ -18,3 +18,28 @@ case noResponse(_ error: String)
 case unableToParseData(_ error: String)
 case unknown(code: Int, error: String)
 }
+
+extension NetworkError: LocalizedError {
+    public var errorDescription: String? {
+        switch self {
+        case .badURL(let error):
+            return error
+        case .apiError(_, let error):
+            return error
+        case .invalidJSON(let error):
+            return error
+        case .unauthorized(_, let error):
+            return error
+        case .badRequest(_, let error):
+            return error
+        case .serverError(_, let error):
+            return error
+        case .noResponse(let error):
+            return error
+        case .unableToParseData(let error):
+            return error
+        case .unknown(_, let error):
+            return error
+        }
+    }
+}
