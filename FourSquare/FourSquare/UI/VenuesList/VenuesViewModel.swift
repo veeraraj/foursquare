@@ -56,6 +56,7 @@ final class VenuesViewModel: LoadableObject {
     }
     
     func bind() {
+        _ = userLocationService.currentUserLocation()
         userLocationService
             .didChangeAuthorization
             .removeDuplicates()

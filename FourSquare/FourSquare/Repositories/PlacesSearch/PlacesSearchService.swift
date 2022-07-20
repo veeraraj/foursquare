@@ -9,6 +9,7 @@ import Foundation
 import Combine
 import CoreLocation
 
+//sourcery: AutoMockable
 protocol PlacesSearchServiceProtocol {
     func searchVenues(location: CLLocationCoordinate2D, radius: Int) -> AnyPublisher<FSResponse, NetworkError>
 }

@@ -10,7 +10,6 @@
 		0DC923412884B5DB007783EB /* FourSquareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC923402884B5DB007783EB /* FourSquareApp.swift */; };
 		0DC923452884B5DD007783EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DC923442884B5DD007783EB /* Assets.xcassets */; };
 		0DC923482884B5DD007783EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DC923472884B5DD007783EB /* Preview Assets.xcassets */; };
-		0DC923522884B5DE007783EB /* FourSquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC923512884B5DE007783EB /* FourSquareTests.swift */; };
 		0DC9235C2884B5DE007783EB /* FourSquareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9235B2884B5DE007783EB /* FourSquareUITests.swift */; };
 		0DC9235E2884B5DE007783EB /* FourSquareUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9235D2884B5DE007783EB /* FourSquareUITestsLaunchTests.swift */; };
 		0DC9236C2885E06C007783EB /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC9236B2885E06C007783EB /* Requestable.swift */; };
@@ -41,6 +40,9 @@
 		0DC923BC28885B0B007783EB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0DC923BB28885B0B007783EB /* Settings.bundle */; };
 		0DC923BF2888634D007783EB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DC923C12888634D007783EB /* Localizable.strings */; };
 		0DC923C42888650B007783EB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC923C32888650B007783EB /* String+Extensions.swift */; };
+		0DC923C728886802007783EB /* SwiftyMocky in Frameworks */ = {isa = PBXBuildFile; productRef = 0DC923C628886802007783EB /* SwiftyMocky */; };
+		0DC923C9288868E2007783EB /* Mock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC923C8288868E2007783EB /* Mock.generated.swift */; };
+		0DC923CB28886922007783EB /* VenuesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC923CA28886922007783EB /* VenuesViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +68,6 @@
 		0DC923442884B5DD007783EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DC923472884B5DD007783EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0DC9234D2884B5DD007783EB /* FourSquareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FourSquareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DC923512884B5DE007783EB /* FourSquareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareTests.swift; sourceTree = "<group>"; };
 		0DC923572884B5DE007783EB /* FourSquareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FourSquareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC9235B2884B5DE007783EB /* FourSquareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareUITests.swift; sourceTree = "<group>"; };
 		0DC9235D2884B5DE007783EB /* FourSquareUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -101,6 +102,8 @@
 		0DC923BB28885B0B007783EB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		0DC923C02888634D007783EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0DC923C32888650B007783EB /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		0DC923C8288868E2007783EB /* Mock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.generated.swift; sourceTree = SOURCE_ROOT; };
+		0DC923CA28886922007783EB /* VenuesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DC923C728886802007783EB /* SwiftyMocky in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +182,8 @@
 		0DC923502884B5DE007783EB /* FourSquareTests */ = {
 			isa = PBXGroup;
 			children = (
-				0DC923512884B5DE007783EB /* FourSquareTests.swift */,
+				0DC923C8288868E2007783EB /* Mock.generated.swift */,
+				0DC923CA28886922007783EB /* VenuesViewModelTests.swift */,
 			);
 			path = FourSquareTests;
 			sourceTree = "<group>";
@@ -384,6 +389,9 @@
 				0DC9234F2884B5DD007783EB /* PBXTargetDependency */,
 			);
 			name = FourSquareTests;
+			packageProductDependencies = (
+				0DC923C628886802007783EB /* SwiftyMocky */,
+			);
 			productName = FourSquareTests;
 			productReference = 0DC9234D2884B5DD007783EB /* FourSquareTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -438,6 +446,9 @@
 				Base,
 			);
 			mainGroup = 0DC923342884B5DB007783EB;
+			packageReferences = (
+				0DC923C528886802007783EB /* XCRemoteSwiftPackageReference "SwiftyMocky" */,
+			);
 			productRefGroup = 0DC9233E2884B5DB007783EB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -516,7 +527,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DC923522884B5DE007783EB /* FourSquareTests.swift in Sources */,
+				0DC923CB28886922007783EB /* VenuesViewModelTests.swift in Sources */,
+				0DC923C9288868E2007783EB /* Mock.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -850,6 +862,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0DC923C528886802007783EB /* XCRemoteSwiftPackageReference "SwiftyMocky" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MakeAWishFoundation/SwiftyMocky";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0DC923C628886802007783EB /* SwiftyMocky */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0DC923C528886802007783EB /* XCRemoteSwiftPackageReference "SwiftyMocky" */;
+			productName = SwiftyMocky;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0DC923352884B5DB007783EB /* Project object */;
 }

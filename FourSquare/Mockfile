@@ -1,0 +1,15 @@
+sourceryCommand: null
+sourceryTemplate: null
+FourSquareTests:
+  sources:
+    include:
+    - ./.
+  output: ./Mock.generated.swift
+  targets:
+  - FourSquareTests
+  testable:
+  - FourSquare
+  import:
+  - Combine
+  - CoreLocation
+  - Foundation
